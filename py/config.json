@@ -1,5 +1,5 @@
 {
-    "dburi": "mongodb+srv://dteric:<data2526>@cluster0-djenp.mongodb.net/test?retryWrites=true&w=majority",
+    "dburi": "mongodb+srv://dteric:data2526@cluster0-djenp.mongodb.net/test?retryWrites=true&w=majority",
     "fbclientId": "dteric",
     "fbclientSecret": "data2526"
 }
