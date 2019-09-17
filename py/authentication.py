@@ -11,15 +11,15 @@ def verifyFbToken(fbtoken, fbuserid):
                    + clientId + '&client_secret=' + clientSecret
                    + '&grant_type=client_credentials')
     appToken = requests.get(apptokenurl).json()['access_token']
-    debugtokenurl = ('https://graph.facebook.com/v4.0/debug_token?input_token='
+    debugtokenurl = ('https://graph.facebook.com/v3.2/debug_token?input_token='
                      + fbtoken + '&access_token=' + str(appToken))
     userId = requests.get(debugtokenurl).json()['data']['user_id']
     print('Logged User: ' + userId)
     if userId == fbuserid:
-         profileurl = ('https://graph.facebook.com/v4.0/' + fbuserid +
-                       '?fields=first_name,last_name,profile_pic,email&access_token='
-                       + fbtoken)
-         profile = requests.get(profileurl).json()
+        # profileurl = ('https://graph.facebook.com/v3.2/' + fbuserid +
+        #              '?fields=first_name,last_name,profile_pic,email&access_token='
+        #              + fbtoken)
+        # profile = requests.get(profileurl).json()
         return userId
     return 'error'
 
