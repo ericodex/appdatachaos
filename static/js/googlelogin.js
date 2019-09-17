@@ -1,4 +1,6 @@
 
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 function renderButton() {
     gapi.signin2.render('google-signin2', {
         'scope': 'profile email',
